@@ -36,6 +36,15 @@ export default {
       // 设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。
       this.$router.replace(path)
     }
+  },
+  beforeCreate () {
+    console.log('zi --- beforeCreate')
+  },
+  beforeDestroy () {
+    console.log('----zi  zi beforeDestroy  -')
+  },
+  destroyed () {
+    console.log('----zizi destroyed  -')
   }
 }
 </script>

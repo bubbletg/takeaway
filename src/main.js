@@ -8,6 +8,17 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import VConsole from 'vconsole'
+
+const vConsole = new VConsole({
+  // 可以在此设定要默认加载的面板
+  defaultPlugins: ['system', 'network', 'element', 'storage'],
+  maxLogNumber: 1000,
+  onReady: function () {
+  },
+  onClearLog: function () {
+  }
+})
 
 // import './mock/mockServer' // 加载mockServer即可
 // import loading from './common/imgs/loading.gif'
@@ -27,7 +38,10 @@ import store from './store'
 // })
 
 new Vue({
+  vConsole,
+
   router,
   store,
+
   render: h => h(App)
 }).$mount('#app')

@@ -5,7 +5,8 @@
           :key="index" @click="$router.push('/shop')">
         <a>
           <div class="shop_left">
-            <img class="shop_img" :src="baseImgUrl+shop.image_path">
+            <!-- <img class="shop_img" :src="baseImgUrl+shop.image_path"> -->
+            <img class="shop_img" src="../Star/images/star48_half@3x.png">
           </div>
           <div class="shop_right">
             <section class="shop_detail_header">
@@ -51,7 +52,7 @@
 
 <script>
 import {mapState} from 'vuex'
-// import Star from '../Star/Star.vue'
+import Star from '../Star/Star.vue'
 
 export default {
   data () {
@@ -63,7 +64,7 @@ export default {
     ...mapState(['shops'])
   },
   components: {
-    // Star
+    Star
   }
 }
 </script>

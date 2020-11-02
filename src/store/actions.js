@@ -30,10 +30,11 @@ import {
 export default {
   // 异步获取地址
   async getAddress ({commit, state}) {
+    console.log('getAddress------------')
     // 发送异步ajax请求
     const geohash = state.latitude + ',' + state.longitude
     const result = await reqAddress(geohash)
-    console.log(result)
+    console.log('异步获取地址', result)
     // 提交一个mutation
     if (result.code === 0) {
       const address = result.data

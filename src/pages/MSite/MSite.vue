@@ -127,7 +127,6 @@ export default {
             el: '.swiper-pagination'
           }
         })
-
         // new BScroll('.miste-content-wrapper', {
         //   click: true
         // })
@@ -146,47 +145,56 @@ export default {
   .msite  //首页
     width 100%
     .miste-content-wrapper
-      position fixed
+      position absolute
+      //  position fixed 在手机端可能失效
+      // position fixed
       top: 1.2rem
       bottom: 1.2267rem
       width: 100%
-      .msite_nav
-        bottom-border-1px(#e4e4e4)
-        margin-top 0.4rem
-        height 5.3333rem
-        background #fff
-        .swiper-container
-          width 100%
-          height 100%
-          .swiper-wrapper
+      overflow:visible
+
+      // overflow:auto
+      .miste-content
+        width:100%
+        overflow hidden
+
+        .msite_nav
+          bottom-border-1px(#e4e4e4)
+          margin-top 0.4rem
+          height 5.3333rem
+          background #fff
+          .swiper-container
             width 100%
             height 100%
-            .swiper-slide
-              display flex
-              justify-content center
-              align-items flex-start
-              flex-wrap wrap
-              .link_to_food
-                width 25%
-                .food_container
-                  display block
-                  width 100%
-                  text-align center
-                  padding-bottom 0.2667rem
-                  font-size 0
-                  img
-                    display inline-block
-                    width 1.3333rem
-                    height 1.3333rem
-                span
-                  display block
-                  width 100%
-                  text-align center
-                  font-size 0.3467rem
-                  color #666
-          .swiper-pagination
-            >span.swiper-pagination-bullet-active
-              background #02a774
+            .swiper-wrapper
+              width 100%
+              height 100%
+              .swiper-slide
+                display flex
+                justify-content center
+                align-items flex-start
+                flex-wrap wrap
+                .link_to_food
+                  width 25%
+                  .food_container
+                    display block
+                    width 100%
+                    text-align center
+                    padding-bottom 0.2667rem
+                    font-size 0
+                    img
+                      display inline-block
+                      width 1.3333rem
+                      height 1.3333rem
+                  span
+                    display block
+                    width 100%
+                    text-align center
+                    font-size 0.3467rem
+                    color #666
+            .swiper-pagination
+              >span.swiper-pagination-bullet-active
+                background #02a774
       .msite_shop_list
         top-border-1px(#e4e4e4)
         margin-top 0.2667rem
