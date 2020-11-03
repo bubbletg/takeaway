@@ -14,7 +14,6 @@
         </span>
       </router-link>
     </HeaderTop>
-
     <div class="miste-content-wrapper">
       <div class="miste-content">
         <!--首页导航-->
@@ -145,18 +144,18 @@ export default {
   .msite  //首页
     width 100%
     .miste-content-wrapper
-      position absolute
+      // position absolute
       //  position fixed 在手机端可能失效
       // position fixed
       top: 1.2rem
       bottom: 1.2267rem
       width: 100%
-      overflow:visible
+      // overflow:visible
 
       // overflow:auto
       .miste-content
         width:100%
-        overflow hidden
+        // overflow hidden
 
         .msite_nav
           bottom-border-1px(#e4e4e4)

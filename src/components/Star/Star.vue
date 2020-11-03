@@ -1,3 +1,6 @@
+<!--
+心心评分显示组件
+-->
 <template>
   <div class="star" :class="'star-'+size">
     <span class="star-item" v-for="(sc, index) in starClasses" :class="sc" :key="index"></span>
@@ -12,8 +15,8 @@ const CLASS_OFF = 'off'
 
 export default {
   props: {
-    score: Number,
-    size: Number
+    score: Number, // 评分
+    size: Number // 尺寸
   },
 
   computed: {
@@ -25,7 +28,7 @@ export default {
       const {score} = this
       const scs = []
       // 向scs中添加n个CLASS_ON
-      const scoreInteger = Math.floor(score)
+      const scoreInteger = Math.floor(score) // Math.floor() 向下取整
       for (let i = 0; i < scoreInteger; i++) {
         scs.push(CLASS_ON)
       }
