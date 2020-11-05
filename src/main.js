@@ -10,7 +10,7 @@ import router from './router'
 import store from './store'
 import VConsole from 'vconsole'
 
-// import './mock/mockServer' // 加载mockServer即可
+import './mock/mockServer' // 加载mockServer即可
 import loading from './common/imgs/loading.gif'
 // import './fiters' // 加载过滤器
 

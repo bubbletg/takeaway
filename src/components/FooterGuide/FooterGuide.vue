@@ -1,3 +1,5 @@
+<!--首页底部TAB-->
+
 <template>
   <div class="footer_guide">
     <span class="guide_item" :class="{on: '/msite'===$route.path}" @click="goTo('/msite')">

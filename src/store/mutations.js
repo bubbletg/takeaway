@@ -10,7 +10,7 @@ import {
   RESET_USER_INFO,
   RECEIVE_INFO,
   RECEIVE_RATINGS,
-  RECEIVE_GOODS,
+  RECEIVE_GOODS, // 保存商品
   INCREMENT_FOOD_COUNT,
   DECREMENT_FOOD_COUNT,
   CLEAR_CART,
@@ -45,6 +45,7 @@ export default {
     state.ratings = ratings
   },
 
+  // 保存商家商品
   [RECEIVE_GOODS] (state, {goods}) {
     state.goods = goods
   },
